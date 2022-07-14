@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <h1>Halaman Home</h1>
+    <h1>Hello, <%= nama %></h1>
+    <br />
+
+    <h3>Data Contact</h3>
+    <p>Jumlah Data : <%= cont.length%></p>
+    <% if (cont. length === 0 || cont.lentgh === null || cont.length ===
+    undefined) { %>
+    <p>Data tidak ada atau tidak ditemukan</p>
+    <% } else { %>
+    <ul>
+      <% cont.forEach(data => { %>
+      <li>Name: <%= data.name %></li>
+      <li>Email: <%= data.email %></li>
+      <br />
+      <% }) %>
+    </ul>
+    <% } %>
+  </body>
+</html>
